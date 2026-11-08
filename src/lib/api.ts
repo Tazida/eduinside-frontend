@@ -1,6 +1,7 @@
 import type { Course, Category, Faq, Stats, EnrollmentPayload, InquiryPayload } from './types';
 
-export const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:8000/api';
+// Default "/api": same origin, forwarded to Laravel by the Vite dev server proxy (vite.config.ts)
+export const API_BASE = import.meta.env.VITE_API_BASE || '/api';
 
 // Bundled fallback data
 export const FALLBACK_COURSES: Course[] = [
